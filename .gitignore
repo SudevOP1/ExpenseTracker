@@ -2,3 +2,9 @@
 # virtual environments
 venv/
 
+# python cache
+__pycache__/
+
+# django migrations
+migrations/
+
