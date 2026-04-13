@@ -23,11 +23,18 @@ cd ExpenseTracker
 
 ### 2. Backend Server
 
+One time setup:
+
 ```powershell
 python -m venv
 venv\Scipts\activate
-cd backend
 pip install -r requirements.txt
+```
+
+Starting server:
+
+```powershell
+cd backend
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
