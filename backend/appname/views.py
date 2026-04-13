@@ -27,6 +27,7 @@ def create_expense(request) -> JsonResponse:
                     "name": expense.name,
                     "cost": expense.cost,
                     "desc": expense.desc,
+                    "datetime": expense.datetime,
                 },
             })
         
@@ -55,6 +56,7 @@ def get_expenses(request) -> JsonResponse:
                     "name": expense.name,
                     "cost": expense.cost,
                     "desc": expense.desc,
+                    "datetime": expense.datetime,
                 }
                 for expense in expenses
             ]
@@ -100,6 +102,7 @@ def update_expense(request) -> JsonResponse:
                     "name": expense.name,
                     "cost": expense.cost,
                     "desc": expense.desc,
+                    "datetime": expense.datetime,
                 },
             })
         
