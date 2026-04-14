@@ -72,12 +72,15 @@ ExpenseTracker/
 
 ## 🔌 API Endpoints
 
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `GET` | `/appname/get-expenses/` | Fetch all expenses |
-| `POST` | `/appname/create-expense/` | Add a new expense |
-| `PUT` | `/appname/update-expense/` | Edit an existing expense |
-| `DELETE` | `/appname/delete-expense/` | Delete an expense |
+| Method   | Endpoint                                 | Description                    |
+| :------- | :--------------------------------------- | :----------------------------- |
+| `GET`    | `/appname/get-expenses/`                 | Fetch all expenses             |
+| `GET`    | `/appname/get-expenses/?from=YYYY-MM-DD` | Fetch expenses from a date     |
+| `GET`    | `/appname/get-expenses/?to=YYYY-MM-DD`   | Fetch expenses up to a date    |
+| `GET`    | `/appname/get-expenses/?from=...&to=...` | Fetch expenses in a date range |
+| `POST`   | `/appname/create-expense/`               | Add a new expense              |
+| `PUT`    | `/appname/update-expense/`               | Edit an existing expense       |
+| `DELETE` | `/appname/delete-expense/`               | Delete an expense              |
 
 ## ⚠️ Troubleshooting
 

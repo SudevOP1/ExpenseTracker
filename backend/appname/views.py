@@ -1,5 +1,6 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from datetime import datetime
 import json
 
 from .models import ExpenseModel
@@ -48,7 +49,18 @@ def get_expenses(request) -> JsonResponse:
     try:
 
         if request.method == "GET":
+
             expenses = ExpenseModel.objects.all()
+
+            from_date = request.GET.get("from", None)
+            to_date = request.GET.get("to", None)
+
+            if from_date:
+                from_date = datetime.strftime(from_date, "%Y-%m-%d")
+                expenses = expenses.filter(date__gte=from_date)
+            if to_date:
+                to_date = datetime.strftime(to_date, "%Y-%m-%d")
+                expenses = expenses.filter(date__lte=to_date)
 
             expenses = [
                 {
