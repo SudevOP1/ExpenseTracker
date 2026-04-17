@@ -6,7 +6,7 @@ import json
 from .models import ExpenseModel
 
 @csrf_exempt
-def create_expense(request) -> JsonResponse:
+def create_expense(request):
     try:
 
         if request.method == "POST":
@@ -45,7 +45,7 @@ def create_expense(request) -> JsonResponse:
         })
 
 @csrf_exempt
-def get_expenses(request) -> JsonResponse:
+def get_expenses(request):
     try:
 
         if request.method == "GET":
@@ -91,7 +91,7 @@ def get_expenses(request) -> JsonResponse:
         })
 
 @csrf_exempt
-def update_expense(request) -> JsonResponse:
+def update_expense(request):
     try:
 
         if request.method == "PUT":
