@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-tu63eg^@xjadnj(q7piyhttri8h9uq3yi5cre%8jyt+5%3q7v)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -121,6 +121,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:3000", # flutter
-]
+# CORS settings for development
+CORS_ALLOW_ALL_ORIGINS = True # This allows Web, App, and Emulators to connect
+CORS_ALLOW_CREDENTIALS = True
